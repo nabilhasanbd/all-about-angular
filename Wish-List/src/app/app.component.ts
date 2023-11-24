@@ -15,12 +15,20 @@ export class AppComponent {
     new WishItem('To learn angular'),
     new WishItem('Get coffee', true),
     new WishItem('Find grass that cut itself')
-
+ 
   ];
   title = 'My Wish-List';
+
+  newWishText = "";
 
   toggleItem(item : WishItem){
     item.isComplete = !item.isComplete;
     console.log(item);
+  }
+
+addNewWish(){
+  this.items.push(new WishItem(this.newWishText));
+  this.newWishText = "";
+
   }
 }
