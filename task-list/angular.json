@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Wish-List": {
+    "task-list": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,11 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wish-list",
+            "outputPath": "dist/task-list",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -47,9 +47,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -58,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Wish-List:build:production"
+              "browserTarget": "task-list:build:production"
             },
             "development": {
-              "buildTarget": "Wish-List:build:development"
+              "browserTarget": "task-list:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Wish-List:build"
+            "browserTarget": "task-list:build"
           }
         },
         "test": {

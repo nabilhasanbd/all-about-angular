@@ -6,7 +6,7 @@
       <input type="text" name="new-wish-text" class="form-control" [(ngModel)]="newWishText">
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary" (click)="$event.preventDefault(); addNewWish()" >Add Wish</button>
+      <button type="submit" class="btn btn-primary" (click)="$event.preventDefault(); addNewWish()">Add Wish</button>
     </div>
   </form>
 
@@ -16,15 +16,14 @@
 
   <ng-template #showItem>
     <ul *ngIf="items.length > 0" class="wish-list">
-      <!-- need to understand  -->
       <li *ngFor="let item of items; index as ii">
         <div class="form-check">
           <label class="form-check-label">
-            <input type="checkbox" class="checkbox" [checked]="item.isComplete" 
-            [attr.data-index]="ii" (click)="toggleItem(item)"> {{ item.wishText}}
+            <input type="checkbox" class="checkbox" [checked]="item.isComplete" [attr.data-index]="ii"
+              (click)="toggleItem(item)"> {{ item.wishText}}
           </label>
         </div>
       </li>
-    </ul> 
+    </ul>
   </ng-template>
 </div>
