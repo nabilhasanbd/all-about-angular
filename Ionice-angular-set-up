@@ -1,1 +1,6 @@
 To run -> ionic serve
+
+To make apk ->
+ionic cap copy android (just for the first time)
+ionic cap sync android
+ionic cap open android (if using any other IDE than android studio)
