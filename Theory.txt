@@ -1,0 +1,5 @@
+npm install -g @angular/cli
+এই কমান্ডটি Angular CLI-কে গ্লোবালভাবে (system-wide) install করে, যার ফলে আপনি যেকোনো প্রোজেক্ট বা ডিরেক্টরি থেকে ng কমান্ড ব্যবহার করতে পারবেন।
+
+ng g c blog-post
+creates project 
