@@ -1,0 +1,8 @@
+To run -> ionic serve
+
+To make apk ->
+ionic cap copy android (just for the first time)
+ionic cap sync android
+ionic cap open android (if using any other IDE than android studio)
+
+Then you will get the apk in mobile-ionic\android\app\build\outputs\apk\debug folder
