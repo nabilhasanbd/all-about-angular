@@ -1,5 +1,37 @@
 npm install -g @angular/cli
 এই কমান্ডটি Angular CLI-কে গ্লোবালভাবে (system-wide) install করে, যার ফলে আপনি যেকোনো প্রোজেক্ট বা ডিরেক্টরি থেকে ng কমান্ড ব্যবহার করতে পারবেন।
 
-ng g c blog-post
-creates project 
+ng new my-angular-app
+creates project
+
+ng serve
+to run the project
+
+ng generate component component-name or ng g c blog-post
+creates a component
+
+---------------------------------
+
+Folder Structure 
+
+Asset -> All kinds of static files like image.
+Main.ts -> Entry point of the project
+style.css  -> global css files
+angular.json -> এই ফাইলটি অ্যাঙ্গুলার CLI দ্বারা ব্যবহৃত হয় এবং এটি প্রজেক্টের বিল্ড এবং ডেভেলপমেন্ট প্রক্রিয়াকে পরিচালনা করতে সাহায্য করে।
+package.json -> এর কাজ সংক্ষেপে:
+	1. Project Metadata store করে।
+	2. Dependencies এবং devDependencies manage করে।
+	3. Custom Scripts define করে।
+	4. Configuration Options store করে।
+	5. Project এর initialization এবং setup এ	 সাহায্য করে।
+	এই ফাইলটি ছাড়া Angular বা যেকোনো Node.js project run করা সম্ভব নয়। এটি project এর heart এবং soul হিসেবে কাজ করে
+tsconfig.app.json -> 
+	1. tsconfig.app.json ফাইলটি Angular application এর TypeScript configuration define করে।
+	2. এটি tsconfig.json কে extends করে এবং application-specific settings যোগ করে।
+	3. এটি Angular build process এবং TypeScript compilation কে manage করে।
+	এই ফাইলটি Angular application এর TypeScript setup এবং configuration এর জন্য অত্যন্ত গুরুত্বপূর্ণ!
+tsconfig.json ->	
+	1.tsconfig.json ফাইলটি TypeScript প্রোজেক্টের কনফিগারেশন ফাইল।
+	2. এটি কম্পাইলার কীভাবে কোড ট্রান্সপাইল করবে তা কন্ট্রোল করে।
+	3. এটি Angular, TypeScript, এবং অন্যান্য TypeScript-ভিত্তিক প্রোজেক্টের জন্য বাধ্যতামূলক।
+	এই ফাইলটি সঠিকভাবে সেটআপ না থাকলে Angular বা TypeScript ঠিকমতো কাজ করবে না। 
