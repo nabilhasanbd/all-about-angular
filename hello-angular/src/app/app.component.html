@@ -1,7 +1,10 @@
-<h2>{{title}}</h2>
-<ul>
-  <li *ngFor="let blog of blogs">{{ blog }}</li>
-</ul>
+
+<div class="blog-post" *ngFor="let blog of blogs">
+  <h3>{{blog.Title}}</h3>
+  <p>{{blog.Description}}</p>
+  <p>{{blog.Author}}</p>
+
+</div>
 
 <p>{{"Count Saved : " + number}}</p>
 

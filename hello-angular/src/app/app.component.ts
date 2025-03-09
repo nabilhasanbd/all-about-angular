@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogService } from './blog.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Blog App';
-  blogs = ['Blog 1', 'Blog 2', 'Blog 3'];
+  blogs;
   number = 0;
+
+  constructor(service: BlogService) {
+    this.blogs = service.getBlogPost()
+  }
 
   onClick(event: Event) {
     event.stopPropagation();

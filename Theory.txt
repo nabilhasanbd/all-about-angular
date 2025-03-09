@@ -41,4 +41,13 @@ tsconfig.json ->
 Event Bubbling : Event Bubbling হল একটি DOM ইভেন্ট প্রোপাগেশনের প্রক্রিয়া যেখানে একটি ইভেন্ট প্রথমে টার্গেট (innermost) এলিমেন্টে
  ট্রিগার হয় এবং তারপর ক্রমান্বয়ে তার প্যারেন্ট এবং পূর্বপুরুষ এলিমেন্টগুলিতে (ancestor elements) বুদবুদের মতো উপরে উঠতে থাকে যতক্ষণ না এটি রুট
  এলিমেন্ট বা ডকুমেন্ট অবজেক্টে পৌঁছায় 
+ 
+Dependency Injection : যখন একটি ক্লাস ইনস্ট্যান্স তৈরি করার জন্য অন্য একটি ক্লাসের ইনস্ট্যান্স প্রয়োজন হয়, তখন সেটাকে ডিপেনডেন্সি ইনজেকশন (Dependency 
+Injection - DI) বলে।
 
+ডিপেনডেন্সি ইনজেকশন কীভাবে কাজ করে?
+Angular-এ Dependency Injection এমন একটি পদ্ধতি যেখানে একটি ক্লাসের মধ্যে নির্দিষ্ট ডিপেনডেন্সি (যেমন, সার্ভিস, কম্পোনেন্ট, ইত্যাদি) constructor 
+এর মাধ্যমে ইনজেক্ট করা হয়, যাতে সেই নির্দিষ্ট ক্লাস নির্ভরশীল (dependent) ক্লাসের ফিচারগুলো ব্যবহার করতে পারে।
+
+@Injectable({ providedIn: 'root'}) if we use it in the service then we dont need to add the service 
+in the app module's provider.
