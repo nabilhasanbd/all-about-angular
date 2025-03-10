@@ -10,9 +10,18 @@ export class AppComponent {
   title = 'Angular Blog App';
   blogs;
   number = 0;
+  imageTitle = "Image Post";
+  imageUrl = "https://picsum.photos/id/237/200/300";
+
+  email = "zikero@gmail.com";
+
 
   constructor(service: BlogService) {
     this.blogs = service.getBlogPost()
+  }
+
+  onSave(){
+    console.log(this.email);
   }
 
   onClick(event: Event) {

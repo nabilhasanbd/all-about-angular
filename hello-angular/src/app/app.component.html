@@ -14,3 +14,12 @@
     <button (click)="onClick($event)">Save</button>
   </div>
 </div>
+
+<h2>{{title}}</h2>
+<img src="{{imageUrl}}" alt="">
+<img [src]="imageUrl" alt="">
+
+<br>
+
+<input [(ngModel)]="email" type="text">
+<button (click)="onSave()">save</button>
