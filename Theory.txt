@@ -10,6 +10,9 @@ to run the project
 ng generate component component-name or ng g c blog-post
 creates a component
 
+ng g class user --type=model
+creates a model
+
 ---------------------------------
 
 Folder Structure 
@@ -59,3 +62,7 @@ Data binding and two way data binding
 এই ক্ষেত্রে, ইনপুট ফিল্ডের মান সরাসরি কম্পোনেন্টের email প্রপার্টির সাথে বাইন্ড হয়ে যায়
 1. [ngModel]: এটি একমুখী বাইন্ডিং যা কম্পোনেন্টের প্রপার্টি থেকে ইনপুট ফিল্ডে value সেট করে।
 2. (ngModel): এটি একমুখী বাইন্ডিং যা ইনপুট ফিল্ড থেকে কম্পোনেন্টের প্রপার্টিতে value আপডেট করে।
+
+Angular Style Binding => works with DOM
+1. NgStyIe
+2. NgCIass

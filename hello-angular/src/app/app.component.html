@@ -23,3 +23,23 @@
 
 <input [(ngModel)]="email" type="text">
 <button (click)="onSave()">save</button>
+
+<p>{{email}}</p>
+<br><br>
+
+<div class="user-list-container">
+  <h2>User List</h2>
+  <div class="user-card" *ngFor="let user of users" [ngClass]="user.Active ? 'active-bg' : 'inactive-bg'">
+    <div class="user-info">
+      <img [src]="user.Image" alt="{{ user.Name }}" class="user-avatar">
+      <div class="user-details">
+        <p><b>{{ user.Name }}</b></p>
+        <p>{{ user.Email }}</p>
+        <span [ngClass]="user.Active ? 'active' : 'inactive'">
+          {{ user.Active ? 'ACTIVE' : 'INACTIVE' }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
